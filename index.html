@@ -1,5 +1,59 @@
+<style>
+    section { height: 100vh; }
+    
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+</style>
 <html>
     <body>
+
+        <nav id="navbar" class="nav">
+            <a href="#welcome-section">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <section id="welcome-section" class="welcome-section">
+            <h1>Zumh Lungler </h1>
+            <p>Full Stack Developer</p>
+         </section>
+
+            <section id="projects" class="projects-section">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <a href="google.com" target="_blank" class="project-tile">First Project</a>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <h2>Contact</h2>
+                <div class="contact-links">
+                    <a id="profile-link" href="google.com" target="_blank" class="contact-tile">Github</a>
+                    <a id="profile-link" href="google.com" target="_blank" class="contact-tile">FCCProfile</a>
+                    <a href="google.com" target="_blank" class="contact-tile">Linkedin</a>
+                    <a href="google.com" target="_blank" class="contact-tile">Email</a>
+                    <a href="google.com" target="_blank" class="contact-tile">Hackerrank</a>
+                  
+                </div>
+
+
+            </section>
         <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
     </body>
 </html>
