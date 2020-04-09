@@ -1,6 +1,15 @@
 <style>
-    section { height: 100vh; }
-    
+section { height: 100vh; }
+ body {
+  min-width: 290px;
+  color: black;
+  background-color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  color: white;
+
+}   
+
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -8,9 +17,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red);
+  background: black;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
+}
+
+.nav-list a:hover {
+  background: lightseagreen;
 }
 
 @media only screen and (max-width: 600px) {
@@ -19,14 +32,46 @@
   }
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  background-color:lightseagreen;
+ 
+}
+
+.projects-section {
+    text-align: center;
+  padding: 10rem 2rem;
+  background: white;
+ 
+}
+
+
+
+
 </style>
 <html>
+    <head>
+        <title>Zumhliansang lungler</title>
+    </head>
     <body>
 
         <nav id="navbar" class="nav">
-            <a href="#welcome-section">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <div class="container">
+                <a href="#welcome-section">About me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+        
+            </div>
         </nav>
 
         <section id="welcome-section" class="welcome-section">
@@ -44,12 +89,20 @@
             <section id="contact" class="contact-section">
                 <h2>Contact</h2>
                 <div class="contact-links">
+                    <a href="google.com" target="_blank" class="contact-tile">Linkedin</a>
                     <a id="profile-link" href="google.com" target="_blank" class="contact-tile">Github</a>
                     <a id="profile-link" href="google.com" target="_blank" class="contact-tile">FCCProfile</a>
-                    <a href="google.com" target="_blank" class="contact-tile">Linkedin</a>
-                    <a href="google.com" target="_blank" class="contact-tile">Email</a>
                     <a href="google.com" target="_blank" class="contact-tile">Hackerrank</a>
-                  
+
+                    <form action="mailto:zumhliansang@live.ca" method="GET" target="_blank">
+                        <h1 class="title">Start Email to Zumhliansang Lungler</h1>
+                        <div class="field"><label class="label" for="subject">Email Subject</label>
+                            <input name="subject" id="subject" type="text" class="input" value="Example Email Subject"></div>
+                        <div class="field"><label class="label" for="body">Email Body</label>
+                            <textarea class="textarea" name="body" id="body" placeholder="...Emailbody"></textarea></div>
+                        <div><input type="submit" value="Create Email" class="button is-primary"></div>
+                    </form>
+
                 </div>
 
 
